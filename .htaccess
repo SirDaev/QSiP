@@ -1,0 +1,34 @@
+# Parent directory .htaccess blocks .xml files, enable specific ones here
+<Files "sitemap.xml">
+    allow from all
+</Files>
+
+### Begin URL Rewrites
+
+# Turn on URL rewrite engine
+RewriteEngine On
+
+# Redirect all non-www traffic to the www version of site (prevents possible duplicate content) 
+##UNCOMMENT##RewriteCond %{HTTP_HOST} !^www.myurl.com$ [NC]
+##UNCOMMENT##RewriteRule ^(.*)$ http://www.myurl.com/$1 [L,R=301]
+
+# Redirect external .php requests to extensionless url
+##UNCOMMENT##RewriteCond %{THE_REQUEST} ^(.+)\.php([#?][^\ ]*)?\ HTTP/
+##UNCOMMENT##RewriteRule ^(.+)\.php$ http://www.myurl.com/$1 [R=301,L]
+
+# Resolve .php file for extensionless php urls
+RewriteRule ^([^/.]+)$ $1.php [L]
+
+### End URL Rewrites
+
+########## Begin - Temporary URL Redirects
+#
+
+#
+########## End - Temporary URL Redirects
+
+########## Begin - Permanent URL Redirects
+#
+
+#
+########## End - Permanent URL Redirects
