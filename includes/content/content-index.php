@@ -1,0 +1,1 @@
+<h1>Quick Skeleton in PHP</h1>
