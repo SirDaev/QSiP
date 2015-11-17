@@ -18,7 +18,7 @@
 			<?php include 'includes/nav.php' ?>
 		</nav>
 		<main>
-			<?php include 'includes/content/content-home.php' ?>
+			<?php include 'includes/content/content-index.php' ?>
 		</main>
 		<footer>
 			<?php include 'includes/footer.php' ?>
